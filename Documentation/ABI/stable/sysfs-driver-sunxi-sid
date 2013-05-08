@@ -1,0 +1,8 @@
+What:		/sys/../eeprom
+Date:		July 2013
+Contact:	Oliver Schinagl <oliver@schinagl.nl>
+Description:	read-only access to the SID (Security/Serial -ID) on current
+		A-series SoC's from Allwinner. Currently supports A10, A10s and
+		A13 CPU's.
+Users:		any user space application which wants to read the SID on
+		Allwinner's A-series of CPU's.
