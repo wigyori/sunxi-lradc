@@ -413,6 +413,7 @@ static void __init sunxi_gates_clk_setup(struct device_node *node,
 /* Matches for of_clk_init */
 static const __initconst struct of_device_id clk_match[] = {
 	{.compatible = "allwinner,sun4i-osc-clk", .data = sunxi_osc_clk_setup,},
+	{ .compatible = "fixed-clock", .data = of_fixed_clk_setup, },
 	{}
 };
 
