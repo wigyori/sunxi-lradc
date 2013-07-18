@@ -719,6 +719,12 @@ __armv7_mmu_cache_on:
 		mcr	p15, 0, r0, c7, c10, 4	@ drain write buffer
 		tst	r11, #0xf		@ VMSA
 		mcrne	p15, 0, r0, c8, c7, 0	@ flush I,D TLBs
+		ALT_SMP(mrc	p15, 0, r0, c1, c0, 1)
+		ALT_UP(mov	r0, #(1 << 6))	@ fake it for UP
+		tst	r0, #(1 << 6)		@ SMP/nAMP mode enabled?
+		orreq	r0, r0, #(1 << 6)	@ Enable SMP/nAMP mode
+		orreq	r0, r0, r10		@ Enable CPU-specific SMP bits
+		mcreq	p15, 0, r0, c1, c0, 1
 #endif
 		mrc	p15, 0, r0, c1, c0, 0	@ read control reg
 		bic	r0, r0, #1 << 28	@ clear SCTLR.TRE
