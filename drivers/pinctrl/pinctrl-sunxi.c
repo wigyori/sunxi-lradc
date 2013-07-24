@@ -644,6 +644,10 @@ static struct of_device_id sunxi_pinctrl_match[] = {
 		.compatible = "allwinner,sun6i-a31-pinctrl",
 		.data = (void *)&sun6i_a31_pinctrl_data,
 	},
+	{
+		.compatible = "allwinner,sun7i-a20-pinctrl",
+		.data = (void *)&sun7i_a20_pinctrl_data,
+	},
 	{}
 };
 MODULE_DEVICE_TABLE(of, sunxi_pinctrl_match);
