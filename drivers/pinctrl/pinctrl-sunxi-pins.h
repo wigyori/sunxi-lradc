@@ -3726,7 +3726,7 @@ static const struct sunxi_desc_pin sun7i_a20_pins[] = {
 		  SUNXI_FUNCTION(0x3, "i2c3")),		/* SDA */
 	SUNXI_PIN(SUNXI_PINCTRL_PIN_PI2,
 		  SUNXI_FUNCTION(0x0, "gpio_in"),
-		  SUNXI_FUNCTION(0x1, "gpio_out")),
+		  SUNXI_FUNCTION(0x1, "gpio_out"),
 		  SUNXI_FUNCTION(0x3, "i2c4")),		/* SCK */
 	SUNXI_PIN(SUNXI_PINCTRL_PIN_PI3,
 		  SUNXI_FUNCTION(0x0, "gpio_in"),
