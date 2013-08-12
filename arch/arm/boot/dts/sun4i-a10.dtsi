@@ -373,5 +373,13 @@
 			clock-frequency = <100000>;
 			status = "disabled";
 		};
+
+                lradc@01c22800 {
+                        compatible = "allwinner,sun4i-kbd";
+                        reg = <0x01c22800 0x400>;
+                        interrupts = <31>;
+                        status = "disabled";
+                };
+
 	};
 };
