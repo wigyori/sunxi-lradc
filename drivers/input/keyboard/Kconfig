@@ -652,4 +652,16 @@ config KEYBOARD_CROS_EC
 	  To compile this driver as a module, choose M here: the
 	  module will be called cros_ec_keyb.
 
+config KEYBOARD_SUN4I_KEYBOARD
+	depends on ARCH_SUNXI
+	tristate "SUN4I keyboard support"
+	help
+	  Say Y here to enable the keyboard/keypad for sunxi boards.
+
+config KEYBOARD_SUN4I_KEYBOARD_DEBUG
+	bool "Debug sun4i-keyboard"
+	help
+	  Say Y here to enable debugging of sun4i-keyboard driver.
+
 endif
+
